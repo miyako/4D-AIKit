@@ -14,6 +14,12 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 ## Topic: Function Calls and Structured Output
 
+Structured&nbsp;Output||Function&nbsp;Call on service providers
+
+|Model|FireWorks AI|
+|-|:-:|
+|Kimi K2 thinking|✅|
+
 ### Phi 
 
 **Phi** is an open weight model developed by Microsoft. The model is hosted by multiple providers including ~~[Fireworks AI](https://fireworks.ai)~~, ~~[Together AI](https://www.together.ai)~~, and [Microsoft Foundry](https://azure.microsoft.com/en-us). 
