@@ -115,7 +115,7 @@ Function _parseDataLine($textData : Text) : Object
 		$textData:=Substring:C12($textData; $pos)  // ie. remove "data: before json line", XXX: maybe just check data: 
 	End if 
 	
-	var $data:=Try(JSON Parse:C1218($textData))
+	var $data:=Try(JSON Parse:C1218($textData; Is object:K8:27))
 	If ($data=Null:C1517)
 		If (This:C1470._decodingErrors=Null:C1517)
 			This:C1470._decodingErrors:=Last errors:C1799
