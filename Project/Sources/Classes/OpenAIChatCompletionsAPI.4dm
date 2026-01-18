@@ -30,6 +30,42 @@ Function create($messages : Collection; $parameters : cs:C1710.OpenAIChatComplet
 			$body.messages.push($message._toBody())
 		End for each 
 	End if 
+	
+	Case of 
+		: (String:C10(This:C1470._client.baseURL)="https://api.anthropic.com/v1")
+			If (OB Is defined:C1231($body; "response_format"))
+				$body.output_format:=$body.response_format
+				If (OB Is defined:C1231($body.output_format; "json_schema"))
+					If (OB Is defined:C1231($body.output_format.json_schema; "schema"))
+						$body.output_format.schema:=$body.output_format.json_schema.schema
+						OB REMOVE:C1226($body.output_format; "json_schema")
+					End if 
+				End if 
+				OB REMOVE:C1226($body; "response_format")
+			End if 
+		: (String:C10(This:C1470._client.baseURL)="@.openai.azure.com/openai/v1")
+			If (["@Llama-3.1@"; "Phi-4@"].some(Formula:C1597($2=$1.value); String:C10($parameters.model)))
+				If (OB Is defined:C1231($body; "response_format"))
+					If ($body.response_format.type="json_schema")
+						If (OB Is defined:C1231($body.response_format; "json_schema"))
+							$message:=$messages.query("role == :1"; "system").first()
+							If ($message#Null:C1517)
+								If (Value type:C1509($message.text)=Is text:K8:3)
+									$message.text+=["You must output valid JSON only."; \
+										"You must not add any extra properties not defined in the schema."; \
+										"You must not change any property name defined in the schema."; \
+										"you must not omit any required property defined in the schema."; \
+										"You must strictly adhere to this JSON schema: "; \
+										JSON Stringify:C1217($body.response_format.json_schema.schema)].join("\n")
+								End if 
+							End if 
+						End if 
+						$body.response_format:={type: "json_object"}
+					End if 
+				End if 
+			End if 
+	End case 
+	
 	return This:C1470._client._post("/chat/completions"; $body; $parameters; cs:C1710.OpenAIChatCompletionsResult)
 	
 /*
