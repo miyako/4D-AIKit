@@ -20,7 +20,29 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 **Phi 4 Mini** is the first version that added native function call support and native structured output. Earlier versions including the original Phi 4 do not have native function call support. **llama.cpp** simulates function calls by system prompt injection and post processing when the `--jinja` and `--chat-template phi3` CLI flags are passed.
 
+The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used in 4D AI Kit. When you try to access Azure via 4D AI Kit you will get the error:
 
+```
+{"error":{"code":"Invalid input","status":422,"message":"invalid input error","details":[{"type":"value_error","loc":["body","response_format","type"],"msg":"Value error, Response format was json_schema but must be either 'text' or 'json_object'.","input":"json_schema","ctx":{"error":{}}}]}}
+```
+
+Workaround is to regress to:
+
+```4d
+Case of 
+: (This._client.baseURL="@.openai.azure.com/openai/v1")
+	If (OB Is defined($body; "response_format"))
+		If ($body.response_format.type="json_schema")
+			$body.response_format:={type: "json_object"}
+		End if 
+	End if 
+End case 
+```
+
+But then you are only guaranteed a valid JSON object, not a structured output according to schema.
+You can include the JSON schema "as is" in the prompt but quick testing shows that the model is totally incapable of producing structured data either way.
+
+---
 
 #### OpenAI Compatibility with AIKit function calling
 
