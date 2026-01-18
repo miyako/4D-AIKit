@@ -19,6 +19,9 @@ Structured&nbsp;Output||Function&nbsp;Call on service providers
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|
 |-|:-:|:-:|:-:|
 |Kimi K2 Thinking|✅||✅
+|Qwen 3 235B Thinking|✅||
+|DeepSeek r1|⚠️|
+|Cogito 671B v2|⚠️
 
 ### Phi 
 
