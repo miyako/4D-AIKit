@@ -18,7 +18,7 @@ Structured&nbsp;Output||Function&nbsp;Call on service providers
 
 |Model|FireWorks AI|Azure OpenAI|
 |-|:-:|:-:|
-|Kimi K2 thinking|✅||
+|Kimi K2 Thinking|✅||
 
 ### Phi 
 
