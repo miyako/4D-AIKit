@@ -16,9 +16,9 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 Structured&nbsp;Output||Function&nbsp;Call on service providers
 
-|Model|FireWorks AI|Azure OpenAI|
-|-|:-:|:-:|
-|Kimi K2 Thinking|✅||
+|Model|FireWorks AI|Azure OpenAI|Moonshot AI|
+|-|:-:|:-:|:-:|
+|Kimi K2 Thinking|✅||✅
 
 ### Phi 
 
