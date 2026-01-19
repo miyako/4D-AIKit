@@ -14,8 +14,8 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 ## Topic: Function Calls and Structured Output
 
-|Model|FireWorks AI|Azure OpenAI|Moonshot AI|
-|-|:-:|:-:|:-:|
+|Model|FireWorks AI|Azure OpenAI|Moonshot AI|DeepInfra
+|-|:-:|:-:|:-:|:-:|
 |Llama 3.1 405B| |❌
 |Kimi K2 Thinking|✅|❌|✅
 |Qwen 3 235B Thinking|✅||
