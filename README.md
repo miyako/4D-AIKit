@@ -42,15 +42,15 @@ In this test, the prompt left the model to its own devices whether to use the to
 
 **Phi 4 Mini** is the first version that added native function call support and native structured output. Earlier versions including the original Phi 4 do not have native function call support. **llama.cpp** simulates function calls by system prompt injection and post processing when the `--jinja` and `--chat-template phi3` CLI flags are passed.
 
-|Model|llama.cpp schema|llama.cpp||Azure OpenAI|DeepInfra
-|-|:-:|:-:|:-:|:-:|:-:|
-|Phi 4 Mini Flash Reasoning|❌|❌|||
-|Phi 4 Mini Reasoning Plus|✅|❌
-|Phi 4 Mini Reasoning|✅|❌|❌|❌|
-|Phi 4 Mini Instruct|✅|❌|❌|❌|
+|Model|llama.cpp|Azure OpenAI|DeepInfra
+|-|:-:|:-:|:-:|
+|Phi 4 Mini Flash Reasoning|||
+|Phi 4 Mini Reasoning Plus|✅<br/>❌|
+|Phi 4 Mini Reasoning|✅<br/>❌|❌<br/>❌|
+|Phi 4 Mini Instruct|✅<br/>❌|❌<br/>❌
 |Phi 4 Reasoning Plus|
-|Phi 4 Reasoning||❌|❌|❌|
-|Phi 4 |||||✅<br/>❌
+|Phi 4 Reasoning||❌<br/>❌||
+|Phi 4 |||❌<br/>❌
 
 The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used by 4D AI Kit. That means the output is unreliable. Quick testing shows that the "instuct" models produce valid JSON but ignore the schema. "Reasoning" models don't event produce valid JSON. This is likely a feature of the backend server, not necesarily of the models themselves.
 
