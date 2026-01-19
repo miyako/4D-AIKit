@@ -28,6 +28,14 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 > [!WARNING]
 > These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
 
+Function calls and structured outputs are features not just of the models (although the model plays a huge part) but also the platform on which the inference is performed. The *Kimi K2 Thinking* model performs best on its native platform. Azure OpenAI evidently does a lousy job at prompt injection and fails to deliver the full potential of models like *Kimi*, *Qwen 3* or *DeepSeek*. The test also shows suggests that *DeepSeek* is a model that can hallucinate badly without proper tuning.  
+
+## Thinking vs. Reasoning vs Instruct
+
+Function calls and structured outputs do not necessarily require models to think or reason. For simple agentic automation tasks, an "instruct" model that understands natural language and follows instructions would be both safer and more efficient. A "thinking" model first strategies its course of action, which consumes massive amount of tokens and increases the time it takes to generate the first token. It also introduces an unnecessary layer of unpredictability to what should be a straightforward task. Likewise, "reasoning" models might disobey instructions that seem, well, unreasonable. 
+
+In this test, the prompt left the model to its own devices and let it use the tools it thought was necessary. It was also up to the model how to fulfil the JSON schema. Some of the failures are not necessarily damning verdicts but rather an indication that maybe a simpler model or a verbose prompt was needed.
+
 ### Phi 
 
 **Phi** is an open weight model developed by Microsoft. The model is hosted by multiple providers including ~~[Fireworks AI](https://fireworks.ai)~~, ~~[Together AI](https://www.together.ai)~~, and [Microsoft Foundry](https://azure.microsoft.com/en-us). 
