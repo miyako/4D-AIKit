@@ -34,7 +34,7 @@ Function calls and structured outputs are features not just of the models (altho
 
 Function calls and structured outputs do not necessarily require models to think or reason. For simple agentic automation tasks, an "instruct" model that understands natural language and follows instructions would be both safer and more efficient. A "thinking" model first strategies its course of action, which consumes massive amount of tokens and increases the time it takes to generate the first token. It also introduces an unnecessary layer of unpredictability to what should be a straightforward task. Likewise, "reasoning" models might disobey instructions that seem, well, unreasonable. 
 
-In this test, the prompt left the model to its own devices and let it use the tools it thought was necessary. It was also up to the model how to fulfil the JSON schema. Some of the failures are not necessarily damning verdicts but rather an indication that maybe a simpler model or a verbose prompt was needed.
+In this test, the prompt left the model to its own devices whether to use the tools or not. The combinaation of a demanding prompt and and exact schema might have pushed the model to an imapass or hallicanation rut. Some of the failures are not necessarily damning verdicts but rather an indication that maybe a simpler model or a verbose prompt was needed.
 
 ### Phi 
 
