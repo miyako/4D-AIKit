@@ -27,6 +27,15 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 **Phi 4 Mini** is the first version that added native function call support and native structured output. Earlier versions including the original Phi 4 do not have native function call support. **llama.cpp** simulates function calls by system prompt injection and post processing when the `--jinja` and `--chat-template phi3` CLI flags are passed.
 
+|Model|llama.cpp||
+|-|:-:|:-:|
+|Phi 4 Mini Flash Reasoning|❌||
+|Phi 4 Mini Reasoning Plus|||
+|Phi 4 Mini Reasoning|||
+|Phi 4 Mini Instruct|||
+|Phi 4 Reasoning|||
+|Phi 4 |||
+
 The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used in 4D AI Kit. When you try to access Azure via 4D AI Kit you will get the error:
 
 ```
