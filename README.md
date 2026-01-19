@@ -21,7 +21,7 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 |DeepSeek R1|⚠️|
 |Cogito 671B v2|⚠️
 
-> ![WARNING]
+> [!WARNING]
 > These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
 
 ### Phi 
