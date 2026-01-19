@@ -45,6 +45,8 @@ In this test, the prompt left the model to its own devices whether to use the to
 
 **Phi 4 Mini** is the first version that added native function call support and native structured output. Earlier versions including the original Phi 4 do not have native function call support. **llama.cpp** simulates function calls by system prompt injection and post processing when the `--jinja` and `--chat-template phi3` CLI flags are passed.
 
+The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used by 4D AI Kit. That means the output is unreliable. Quick testing shows that the "instuct" models produce valid JSON but ignore the schema. "Reasoning" models don't event produce valid JSON. This is likely a feature of the backend server, not necesarily of the models themselves.
+
 |Model|llama.cpp|Azure OpenAI|DeepInfra
 |-|:-:|:-:|:-:|
 |Phi 4 Mini Flash Reasoning|||
@@ -54,10 +56,13 @@ In this test, the prompt left the model to its own devices whether to use the to
 |Phi 4 Reasoning Plus|
 |Phi 4 Reasoning|✅|❌<br/>❌||
 |Phi 4 |||❌<br/>❌
-|Qwen3 4B Thinking 2507|||
-|Qwen3 4B Instruct 2507|||
 
-The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used by 4D AI Kit. That means the output is unreliable. Quick testing shows that the "instuct" models produce valid JSON but ignore the schema. "Reasoning" models don't event produce valid JSON. This is likely a feature of the backend server, not necesarily of the models themselves.
+**Qwen** is an open weight model developed by Alibaba. Their flagship `Qwen3-235B-A22B` is hosted by Alibaba Cloud and multiple providers. Qwen 2.5 and 3 both have native function call support.
+
+|Model|llama.cpp|Azure OpenAI|DeepInfra
+|-|:-:|:-:|:-:|
+|Qwen 3 4B Thinking 2507|||
+|Qwen 3 4B Instruct 2507|||
 
 ---
 
