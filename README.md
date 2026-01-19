@@ -18,11 +18,11 @@ json schema/tool call
 
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|DeepInfra
 |-|:-:|:-:|:-:|:-:|
-|Llama 3.1 405B| |❌||✅
-|Kimi K2 Thinking|✅|❌|✅
-|Qwen 3 235B Thinking|✅||
-|Qwen 3 235B Instruct||||✅
-|DeepSeek R1|❌|❌|
+|Llama 3.1 405B| |❌||
+|Kimi K2 Thinking|✅|❌|✅|✅<br/>❌
+|Qwen 3 235B Thinking|✅|||✅<br/>❌
+|Qwen 3 235B Instruct||||
+|DeepSeek R1|❌|❌||✅<br/>❌
 |Cogito 671B v2|❌|
 
 > [!WARNING]
@@ -34,15 +34,15 @@ json schema/tool call
 
 **Phi 4 Mini** is the first version that added native function call support and native structured output. Earlier versions including the original Phi 4 do not have native function call support. **llama.cpp** simulates function calls by system prompt injection and post processing when the `--jinja` and `--chat-template phi3` CLI flags are passed.
 
-|Model|llama.cpp schema|llama.cpp tool|Azure OpenAI schema|Azure OpenAI tool
-|-|:-:|:-:|:-:|:-:|
+|Model|llama.cpp schema|llama.cpp||Azure OpenAI|DeepInfra
+|-|:-:|:-:|:-:|:-:|:-:|
 |Phi 4 Mini Flash Reasoning|❌|❌|||
 |Phi 4 Mini Reasoning Plus|✅|❌
 |Phi 4 Mini Reasoning||❌|❌|❌|
 |Phi 4 Mini Instruct||❌|❌|❌|
 |Phi 4 Reasoning Plus|
 |Phi 4 Reasoning||❌|❌|❌|
-|Phi 4 |||
+|Phi 4 |||||✅<br/>❌
 
 The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used by 4D AI Kit. That means the output is unreliable. Quick testing shows that the "instuct" models produce valid JSON but ignore the schema. "Reasoning" models don't event produce valid JSON. This is likely a feature of the backend server, not necesarily of the models themselves.
 
