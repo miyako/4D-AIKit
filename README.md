@@ -16,7 +16,7 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|
 |-|:-:|:-:|:-:|
-|Kimi K2 Thinking|✅||✅
+|Kimi K2 Thinking|✅|❌|✅
 |Qwen 3 235B Thinking|✅||
 |DeepSeek R1|⚠️|
 |Cogito 671B v2|⚠️
@@ -33,15 +33,12 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 |Model|llama.cpp schema|llama.cpp tool|Azure OpenAI schema|Azure OpenAI tool
 |-|:-:|:-:|:-:|:-:|
 |Phi 4 Mini Flash Reasoning|❌|❌|||
-|Phi 4 Mini Reasoning Plus|✅|⚠️
-|Phi 4 Mini Reasoning||❌|⚠️|❌|
-|Phi 4 Mini Instruct||❌|⚠️|⚠️|
+|Phi 4 Mini Reasoning Plus|✅|❌
+|Phi 4 Mini Reasoning||❌|❌|❌|
+|Phi 4 Mini Instruct||❌|❌|❌|
 |Phi 4 Reasoning Plus|
-|Phi 4 Reasoning||❌|⚠️|❌|
+|Phi 4 Reasoning||❌|❌|❌|
 |Phi 4 |||
-
-❌ error  
-⚠️ no error, invalid results
 
 The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used by 4D AI Kit. That means the output is unreliable. Quick testing shows that the "instuct" models produce valid JSON but ignore the schema. "Reasoning" models don't event produce valid JSON. This is likely a feature of the backend server, not necesarily of the models themselves.
 
