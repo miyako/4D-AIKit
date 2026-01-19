@@ -63,7 +63,7 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 |Model|llama.cpp|Azure OpenAI|DeepInfra |
 |-|:-:|:-:|:-:|
 |Qwen 3 0.6B|✅<br/>❌||
-|Qwen 3 1.7B|✅<br/>❌||
+|Qwen 3 1.7B|❌<br/>❌||
 |Qwen 3 4B Thinking 2507|✅<br/>✅||
 |Qwen 3 4B Instruct 2507|✅<br/>✅||
 |Qwen 3 14B |||❌<br/>❌
