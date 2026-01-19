@@ -21,6 +21,9 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 |DeepSeek R1|⚠️|
 |Cogito 671B v2|⚠️
 
+> ![WARNING]
+> These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
+
 ### Phi 
 
 **Phi** is an open weight model developed by Microsoft. The model is hosted by multiple providers including ~~[Fireworks AI](https://fireworks.ai)~~, ~~[Together AI](https://www.together.ai)~~, and [Microsoft Foundry](https://azure.microsoft.com/en-us). 
