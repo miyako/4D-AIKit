@@ -46,8 +46,8 @@ In this test, the prompt left the model to its own devices whether to use the to
 |-|:-:|:-:|:-:|:-:|:-:|
 |Phi 4 Mini Flash Reasoning|❌|❌|||
 |Phi 4 Mini Reasoning Plus|✅|❌
-|Phi 4 Mini Reasoning||❌|❌|❌|
-|Phi 4 Mini Instruct||❌|❌|❌|
+|Phi 4 Mini Reasoning|✅|❌|❌|❌|
+|Phi 4 Mini Instruct|✅|❌|❌|❌|
 |Phi 4 Reasoning Plus|
 |Phi 4 Reasoning||❌|❌|❌|
 |Phi 4 |||||✅<br/>❌
