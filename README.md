@@ -19,12 +19,12 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|DeepInfra
 |-|:-:|:-:|:-:|:-:|
-|Llama 3.1 405B| |❌||
-|Kimi K2 Thinking|✅|❌|✅<br/>✅|✅<br/>❌
-|Qwen 3 235B Thinking|✅|||✅<br/>❌
+|Llama 3.1 405B| |❌<br/>❌||
+|Kimi K2 Thinking|❌<br/>❌|❌<br/>❌|✅<br/>✅|✅<br/>❌
+|Qwen 3 235B Thinking|❌<br/>❌|||✅<br/>❌
 |Qwen 3 235B Instruct||||
-|DeepSeek R1|❌|❌||✅<br/>❌
-|Cogito 671B v2|❌|
+|DeepSeek R1|❌<br/>❌|❌<br/>❌||✅<br/>❌
+|Cogito 671B v2|❌<br/>❌|
 
 > [!WARNING]
 > These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
