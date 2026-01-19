@@ -52,8 +52,8 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 |Phi 4 Mini Reasoning Plus|✅<br/>❌|
 |Phi 4 Mini Reasoning|✅<br/>❌|❌<br/>❌|
 |Phi 4 Mini Instruct|✅<br/>❌|❌<br/>❌
-|Phi 4 Reasoning Plus|
-|Phi 4 Reasoning|✅<br/>&nbsp;|❌<br/>❌||
+|Phi 4 Reasoning Plus|&nbsp;<br>&nbsp;
+|Phi 4 Reasoning|&nbsp;<br/>&nbsp;|❌<br/>❌||
 |Phi 4 |<br/>||❌<br/>❌
 
 ### Qwen 
@@ -62,11 +62,13 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 
 |Model|llama.cpp|Azure OpenAI|DeepInfra |
 |-|:-:|:-:|:-:|
+|Qwen 3 0.6B|||
+|Qwen 3 1.7B|||
+|Qwen 3 4B Thinking 2507|||
+|Qwen 3 4B Instruct 2507|||
 |Qwen 3 14B |||❌<br/>❌
 |Qwen 3 32B ||❌<br/>❌|✅<br/>❌
 |Qwen 3 235B Thinking|||✅<br/>❌
-|Qwen 3 4B Thinking 2507|||
-|Qwen 3 4B Instruct 2507|||
 
 ---
 
