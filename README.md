@@ -30,8 +30,8 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 |Model|llama.cpp|Azure OpenAI|JSON|JSON Schema|Function Call|
 |-|:-:|:-:|:-:|:-:|:-:|
 |Phi 4 Mini Flash Reasoning|❌||
-|Phi 4 Mini Reasoning Plus|||
-|Phi 4 Mini Reasoning|`7.68@Q4_K_M`|✅|❌|❌|❌
+|Phi 4 Mini Reasoning Plus|`2.49`&nbsp;`Q4_K_M`||
+|Phi 4 Mini Reasoning|`2.49`&nbsp;`Q4_K_M`|✅|❌|❌|❌
 |Phi 4 Mini Instruct||✅|❌|⚠️|⚠️
 |Phi 4 Reasoning Plus||
 |Phi 4 Reasoning||✅|❌|❌|❌
@@ -39,9 +39,6 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 ❌ error  
 ⚠️ no error, invalid results
-
-
-The models are probably too large to run on a laptop or a regular consumer PC.
 
 The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used by 4D AI Kit. That means the output is unreliable. Quick testing shows that the "instuct" models produce valid JSON but ignore the schema. "Reasoning" models don't event produce valid JSON. This is likely a feature of the backend server, not necesarily of the models themselves.
 
