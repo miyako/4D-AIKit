@@ -52,9 +52,9 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 |Phi 4 Mini Reasoning Plus|✅<br/>❌|
 |Phi 4 Mini Reasoning|✅<br/>❌|❌<br/>❌|
 |Phi 4 Mini Instruct|✅<br/>❌|❌<br/>❌
-|Phi 4 Reasoning Plus|&nbsp;<br>&nbsp;
-|Phi 4 Reasoning|&nbsp;<br/>&nbsp;|❌<br/>❌||
-|Phi 4 |<br/>||❌<br/>❌
+|Phi 4 Reasoning Plus|✅<br/>❌
+|Phi 4 Reasoning|&nbsp;<br>&nbsp;|❌<br/>❌||
+|Phi 4 |<br/>|&nbsp;<br>&nbsp;|❌<br/>❌
 
 ### Qwen 
 
