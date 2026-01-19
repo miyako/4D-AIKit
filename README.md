@@ -48,7 +48,7 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 
 |Model|llama.cpp|Azure OpenAI|DeepInfra
 |-|:-:|:-:|:-:|
-|Phi 4 Mini Flash Reasoning|||
+|Phi 4 Mini Flash Reasoning|&nbsp;<br>&nbsp;||
 |Phi 4 Mini Reasoning Plus|✅<br/>❌|
 |Phi 4 Mini Reasoning|✅<br/>❌|❌<br/>❌|
 |Phi 4 Mini Instruct|✅<br/>❌|❌<br/>❌
