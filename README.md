@@ -20,10 +20,10 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|DeepInfra
 |-|:-:|:-:|:-:|:-:|
 |Llama 3.1 405B| |❌<br/>❌||
-|Kimi K2 Thinking|❌<br/>❌|❌<br/>❌|✅<br/>✅|✅<br/>❌
-|Qwen 3 235B Thinking|❌<br/>❌|||✅<br/>❌
+|Kimi K2 Thinking|✅<br/>❌|❌<br/>❌|✅<br/>✅|✅<br/>❌
+|Qwen 3 235B Thinking|⚠️<br/>❌|||⚠️<br/>❌
 |Qwen 3 235B Instruct||||
-|DeepSeek R1|❌<br/>❌|❌<br/>❌||✅<br/>❌
+|DeepSeek R1|⚠️<br/>❌|⚠️<br/>❌||⚠️<br/>❌
 |Cogito 671B v2|❌<br/>❌|
 
 > [!WARNING]
