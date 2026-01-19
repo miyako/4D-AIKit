@@ -14,12 +14,13 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 ## Topic: Function Calls and Structured Output
 
-json schema/tool call
+> [!INFO]
+> Top icon indicates JSON schema capability. Botton icon indicates tool call capability.
 
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|DeepInfra
 |-|:-:|:-:|:-:|:-:|
 |Llama 3.1 405B| |❌||
-|Kimi K2 Thinking|✅|❌|✅|✅<br/>❌
+|Kimi K2 Thinking|✅|❌|✅<br/>✅|✅<br/>❌
 |Qwen 3 235B Thinking|✅|||✅<br/>❌
 |Qwen 3 235B Instruct||||
 |DeepSeek R1|❌|❌||✅<br/>❌
