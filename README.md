@@ -37,6 +37,8 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 |Phi 4 Reasoning||✅|
 |Phi 4 |||
 
+The models are probably too large to run on a laptop or a regular consumer PC.
+
 The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used in 4D AI Kit. When you try to access Azure via 4D AI Kit you will get the error:
 
 ```
