@@ -21,6 +21,7 @@ json schema/tool call
 |Llama 3.1 405B| |❌||✅
 |Kimi K2 Thinking|✅|❌|✅
 |Qwen 3 235B Thinking|✅||
+|Qwen 3 235B Instruct||||✅
 |DeepSeek R1|❌|❌|
 |Cogito 671B v2|❌|
 
