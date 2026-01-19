@@ -64,7 +64,7 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 |-|:-:|:-:|:-:|
 |Qwen 3 0.6B|||
 |Qwen 3 1.7B|||
-|Qwen 3 4B Thinking 2507|✅<br/>❌||
+|Qwen 3 4B Thinking 2507|✅<br/>✅||
 |Qwen 3 4B Instruct 2507|✅<br/>✅||
 |Qwen 3 14B |||❌<br/>❌
 |Qwen 3 32B ||❌<br/>❌|✅<br/>❌
