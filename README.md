@@ -18,8 +18,8 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 |-|:-:|:-:|:-:|
 |Kimi K2 Thinking|✅|❌|✅
 |Qwen 3 235B Thinking|✅||
-|DeepSeek R1|⚠️|
-|Cogito 671B v2|⚠️
+|DeepSeek R1|❌|❌|
+|Cogito 671B v2|❌|
 
 > [!WARNING]
 > These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
