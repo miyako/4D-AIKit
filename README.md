@@ -27,14 +27,14 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 **Phi 4 Mini** is the first version that added native function call support and native structured output. Earlier versions including the original Phi 4 do not have native function call support. **llama.cpp** simulates function calls by system prompt injection and post processing when the `--jinja` and `--chat-template phi3` CLI flags are passed.
 
-|Model|llama.cpp|Azure OpenAI|JSON|JSON Schema|Function Call|
-|-|:-:|:-:|:-:|:-:|:-:|
-|Phi 4 Mini Flash Reasoning|❌||
-|Phi 4 Mini Reasoning Plus|`2.49`&nbsp;`Q4_K_M`||
-|Phi 4 Mini Reasoning|`2.49`&nbsp;`Q4_K_M`|✅|❌|❌|❌
-|Phi 4 Mini Instruct||✅|❌|⚠️|⚠️
-|Phi 4 Reasoning Plus||
-|Phi 4 Reasoning||✅|❌|❌|❌
+|Model|llama.cpp schema|llama.cpp tool|Azure OpenAI schema|Azure OpenAI tool
+|-|:-:|:-:|:-:|:-:|
+|Phi 4 Mini Flash Reasoning|❌|❌|||
+|Phi 4 Mini Reasoning Plus|✅|⚠️
+|Phi 4 Mini Reasoning||❌|⚠️|❌|
+|Phi 4 Mini Instruct||❌|⚠️|⚠️|
+|Phi 4 Reasoning Plus|
+|Phi 4 Reasoning||❌|⚠️|❌|
 |Phi 4 |||
 
 ❌ error  
