@@ -59,8 +59,8 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 
 **Qwen** is an open weight model developed by Alibaba. Their flagship `Qwen3-235B-A22B` is hosted by Alibaba Cloud and multiple providers. Qwen 2.5 and 3 both have native function call support.
 
-|Model|llama.cpp|Azure OpenAI|DeepInfra
-|-|:-:|:-:|:-:|
+|Model|llama.cpp|MLX |
+|-|:-:|:-:|
 |Qwen 3 4B Thinking 2507|||
 |Qwen 3 4B Instruct 2507|||
 
