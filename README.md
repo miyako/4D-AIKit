@@ -29,13 +29,13 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 |Model|llama.cpp|Azure OpenAI|
 |-|:-:|:-:|
-|Phi 4 Mini Flash Reasoning|❌|✅|
-|Phi 4 Mini Reasoning Plus||✅|
+|Phi 4 Mini Flash Reasoning|❌||
+|Phi 4 Mini Reasoning Plus|||
 |Phi 4 Mini Reasoning|`7.68@Q4_K_M`|✅|
 |Phi 4 Mini Instruct||✅|
-|Phi 4 Reasoning Plus||✅|
+|Phi 4 Reasoning Plus|||
 |Phi 4 Reasoning||✅|
-|Phi 4 ||✅|
+|Phi 4 |||
 
 The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used in 4D AI Kit. When you try to access Azure via 4D AI Kit you will get the error:
 
