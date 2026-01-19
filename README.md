@@ -53,15 +53,15 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 |Phi 4 Mini Reasoning|✅<br/>❌|❌<br/>❌|
 |Phi 4 Mini Instruct|✅<br/>❌|❌<br/>❌
 |Phi 4 Reasoning Plus|
-|Phi 4 Reasoning|✅|❌<br/>❌||
-|Phi 4 |||❌<br/>❌
+|Phi 4 Reasoning|✅<br/>&nbsp;|❌<br/>❌||
+|Phi 4 |<br/>||❌<br/>❌
 
 **Qwen** is an open weight model developed by Alibaba. Their flagship `Qwen3-235B-A22B` is hosted by Alibaba Cloud and multiple providers including [Fireworks AI](https://fireworks.ai) and [DeepInfra](https://deepinfra.com).  Qwen 2.5 and 3 both have native function call support.
 
 |Model|llama.cpp|DeepInfra |
 |-|:-:|:-:|
 |Qwen 3 14B ||❌<br/>❌
-|Qwen 3 32B ||❌<br/>❌
+|Qwen 3 32B ||✅<br/>❌
 |Qwen 3 235B Thinking||✅<br/>❌
 |Qwen 3 4B Thinking 2507|||
 |Qwen 3 4B Instruct 2507|||
