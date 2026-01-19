@@ -54,6 +54,8 @@ In this test, the prompt left the model to its own devices whether to use the to
 |Phi 4 Reasoning Plus|
 |Phi 4 Reasoning|✅|❌<br/>❌||
 |Phi 4 |||❌<br/>❌
+|Qwen3 4B Thinking 2507|||
+|Qwen3 4B Instruct 2507|||
 
 The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard used by 4D AI Kit. That means the output is unreliable. Quick testing shows that the "instuct" models produce valid JSON but ignore the schema. "Reasoning" models don't event produce valid JSON. This is likely a feature of the backend server, not necesarily of the models themselves.
 
