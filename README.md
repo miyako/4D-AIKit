@@ -58,6 +58,8 @@ Hyper parameters are levers that control the model's temperament. Finding the pe
 
 **Llama**  is an open weight model developed by Meta. Many versions of the model are hosted on different platforms.
 
+Although LLama 3.1 and beyond technically supports structured output and tool calling, a small (`1` or `3` billion parameters) quantised model is too dumb to output reliable results.
+
 |Model|llama.cpp|Azure OpenAI|
 |-|:-:|:-:|
 |Llama 3.1 8B Instruct| ❌<br/>❌
