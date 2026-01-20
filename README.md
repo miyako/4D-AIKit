@@ -20,7 +20,7 @@ Another important innovation is [structured outputs](https://blog.4d.com/4d-aiki
 
 Function calls and structured outputs are features not just of the models but of the platform on which the inference is performed. To give an example, The *Kimi K2 Thinking* model performs well on its native platform but poorly on generic platforms. Same for Phi, Qwen, DeepSeek, or Gemma on Azure OpenAI. You need the perfect combination of prompt, model, and platform for the tools to work efficiently.
 
-## Instruct vs. vs. Reasoning vs. Thinking
+## Instruct vs. Reasoning vs. Thinking
 
 An **instruct** model is trained, or fine-tuned, to follow instructions than simply engage in a casual conversaion. It uses it LLM training to dtermine what the users wants and responds accrodingly. It will only use tools when specifcally asked to. It is the right kind of AI to use as an interface for simple automation tasks.
 
