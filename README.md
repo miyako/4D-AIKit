@@ -18,7 +18,7 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 Another important addition in 4D 21 is [**structured outputs**](https://blog.4d.com/4d-aikit-structured-outputs/). It allows the AI to exchange information in a format that other computer programs can understand. Without structured outputs the AI can only interface with people (or other AI, I guess...), not machines. 
 
-Tool calling and structured outputs depend not just on the models themselves but on the backend inference engine. To give an example, The **Kimi K2 Thinking** model performs well on its native platform but poorly on other platforms. Same for **Phi**, **Qwen**, **DeepSeek**, or **Gemma** on **Azure OpenAI**. For tool calling and structured outputs  need the right combination of prompt, model, and engine.
+Tool calling and structured outputs depend not just on the models themselves but on the backend inference engine. To give an example, The **Kimi K2 Thinking** model performs well on its native platform but poorly on other platforms. Same for **Phi**, **Qwen**, **DeepSeek**, or **Gemma** on **Azure OpenAI**. For tool calling and structured outputs you need the right combination of prompt, model, and engine.
 
 ## Instruct vs. Reasoning vs. Thinking
 
