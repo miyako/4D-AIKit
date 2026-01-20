@@ -20,6 +20,14 @@ Another important innovation is [structured outputs](https://blog.4d.com/4d-aiki
 
 Function calls and structured outputs are features not just of the models but of the platform on which the inference is performed. To give an example, The *Kimi K2 Thinking* model performs well on its native platform but poorly on generic platforms. Same for Phi, Qwen, DeepSeek, or Gemma on Azure OpenAI. You need the perfect combination of prompt, model, and platform for the tools to work efficiently.
 
+## Instruct vs. vs. Reasoning vs. Thinking
+
+An **instruct** model is trained, or fine-tuned, to follow instructions than simply engage in a casual conversaion. It uses it LLM training to dtermine what the users wants and responds accrodingly. It will only use tools when specifcally asked to. It is the right kind of AI to use as an interface for simple automation tasks.
+
+A **reasoning** model is specifically trained in logic. Unlike earlier models that are trained to give the most likely response, the model reflects on its generated output and tries to make sense of it. while it may sound more intelligent, it has the potential to disobey instructions that seem, well, unreasonable. For simple automation tasks, the reasoning may actually backfire and result in hallucination or a chain of thought stuck in a rut.
+
+A **thinking** model is trained to think which course of action to take in order to satisfy the user's expectations. The thinking process consumes massive amount of tokens and increases the time the model takes to make the first move. It also introduces a layer of unpredictability as to what the model will actually do to reach its goal. 
+
 ## Evaluation
 
 > [!TIP]
@@ -37,14 +45,6 @@ Function calls and structured outputs are features not just of the models but of
 
 > [!WARNING]
 > These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
-
-
-
-## Thinking vs. Reasoning vs Instruct
-
-Function calls and structured outputs do not necessarily require models to think or reason. For simple agentic automation tasks, an "instruct" model that understands natural language and follows instructions would be both safer and more efficient. A "thinking" model first strategies its course of action, which consumes massive amount of tokens and increases the time it takes to generate the first token. It also introduces an unnecessary layer of unpredictability to what should be a straightforward task. Likewise, "reasoning" models might disobey instructions that seem, well, unreasonable. 
-
-In this test, the prompt left the model to its own devices whether to use the tools or not. The combination of a demanding prompt and and exact schema might have pushed the model to an imapass or hallicanation rut. Some of the failures are not necessarily damning verdicts but rather an indication that maybe a simpler model or a verbose prompt was needed.
 
 ### Phi 
 
