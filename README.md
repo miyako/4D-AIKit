@@ -12,10 +12,18 @@ Normally you should use the offical releases.
 
 Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `dependencies.json`
 
-## Topic: Function Calls and Structured Output
+## Abstract: Function Calls and Structured Output
+
+4D 21 added [tool calling](https://blog.4d.com/4d-21-and-ai-kit-redefining-how-applications-think-and-act/) to AI Kit. Tool calling allows the AI to agentically make queries to your database. The feature is especially useful with thinking models or reasoning models that can plan a sequence of function calls to complete a multi-step task.
+
+Another important innovation is [structured outputs](https://blog.4d.com/4d-aikit-structured-outputs/) where the AI knows how to exchange infomation in a format that other computer programs can understand. Without structured outputs the AI can only interface with humans, not machines. 
+
+Function calls and structured outputs are features not just of the models but of the platform on which the inference is performed. To give an example, The *Kimi K2 Thinking* model performs well on its native platform but poorly on generic platforms. Same for Phi, Qwen, DeepSeek, or Gemma on Azure OpenAI. You need the perfect combination of prompt, model, and platform for the tools to work efficiently.
+
+## Evaluation
 
 > [!TIP]
-> Top icon indicates JSON schema capability. Botton icon indicates tool call capability.
+> Top icon indicates structured output capability. Botton icon indicates tool calling capability.
 
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|DeepInfra
 |-|:-:|:-:|:-:|:-:|
@@ -30,7 +38,7 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 > [!WARNING]
 > These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
 
-Function calls and structured outputs are features not just of the models (although the model plays a huge part) but also the platform on which the inference is performed. The *Kimi K2 Thinking* model performs best on its native platform. Azure OpenAI evidently does a lousy job at prompt injection and fails to deliver the full potential of models like *Kimi*, *Qwen 3* or *DeepSeek*. The test also shows suggests that *DeepSeek* is a model that can hallucinate badly without proper tuning.  
+
 
 ## Thinking vs. Reasoning vs Instruct
 
@@ -72,6 +80,8 @@ Gemma 3 does not have native [function call](https://ai.google.dev/gemma/docs/ca
 Google released [FunctionGemma](https://blog.google/innovation-and-ai/technology/developers-tools/functiongemma/) to address this issue. But it refuses to process any requests that suggest business:
 
 > I cannot assist with drafting or estimating project proposals. My current capabilities are focused on managing job postings and tool data analysis. I cannot generate strategic business proposals or generate detailed financial projections for projects requiring project management or cost estimation.
+
+Gemma 3 supports structured output on llama.cpp but not on Microsoft Foundry for the same reason as Phi 4. 
 
 |Model|llama.cpp|Google Cloud Platform |
 |-|:-:|:-:|
