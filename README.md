@@ -12,15 +12,17 @@ Normally you should use the offical releases.
 
 Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `dependencies.json`
 
-## Abstract: Function Calls and Structured Output
+## Abstract: Structured Outputs and Tool Calling
 
-4D 21 added [tool calling](https://blog.4d.com/4d-21-and-ai-kit-redefining-how-applications-think-and-act/) to AI Kit. Tool calling allows the AI to agentically make queries to your database. The feature is especially useful with thinking models or reasoning models that can plan a sequence of function calls to complete a multi-step task.
+4D 21 added [**tool calling**](https://blog.4d.com/4d-21-and-ai-kit-redefining-how-applications-think-and-act/) to AI Kit. It allows the AI to make queries to your database. The feature is especially useful with thinking models or reasoning models that can plan a sequence of function calls to complete a multi-step task.
 
-Another important innovation is [structured outputs](https://blog.4d.com/4d-aikit-structured-outputs/) where the AI knows how to exchange infomation in a format that other computer programs can understand. Without structured outputs the AI can only interface with humans, not machines. 
+Another important addition in 4D 21 is [**structured outputs**](https://blog.4d.com/4d-aikit-structured-outputs/). It allows the AI to exchange information in a format that other computer programs can understand. Without structured outputs the AI can only interface with people (or other AI, I guess...), not machines. 
 
-Function calls and structured outputs are features not just of the models but of the platform on which the inference is performed. To give an example, The *Kimi K2 Thinking* model performs well on its native platform but poorly on generic platforms. Same for Phi, Qwen, DeepSeek, or Gemma on Azure OpenAI. You need the perfect combination of prompt, model, and platform for the tools to work efficiently.
+Tool calling and structured outputs depend not just on the models themselves but on the backend inference engine. To give an example, The **Kimi K2 Thinking** model performs well on its native platform but poorly on other platforms. Same for **Phi**, **Qwen**, **DeepSeek**, or **Gemma** on **Azure OpenAI**. For tool calling and structured outputs  need the right combination of prompt, model, and engine.
 
 ## Instruct vs. Reasoning vs. Thinking
+
+LLMs have gone though several phases of evolution in the past couple of years. The most notable of which is that there are now several kinds of models.
 
 An **instruct** model is trained, or fine-tuned, to follow instructions than simply engage in a casual conversaion. It uses it LLM training to dtermine what the users wants and responds accrodingly. It will only use tools when specifcally asked to. It is the right kind of AI to use as an interface for simple automation tasks. On the other hand, an instuct model may fail if the prompt is too abstract or lacks strategy.
 
@@ -30,7 +32,7 @@ A **thinking** model is trained to think which course of action to take in order
 
 ## Hyper Parameters
 
-Hyper parameters are levers that control the model's temperament. Finding the perfect combination is critical for tasks that need to balance of creative thinking and rule based output, especially with models with limited 
+Hyper parameters are levers that control the model's temperament. Finding the perfect combination is critical for tasks that need to balance creative thinking and rules following. This is especially true for smaller models that have limited intelligence.
 
 |Parameter|Description|
 |-|-|
@@ -40,6 +42,21 @@ Hyper parameters are levers that control the model's temperament. Finding the pe
 |`top-k`|Limits how many possible tokens to consider. `1` recommended for structured output.|
 |`repeat-penalty`|Increase to penalise repeating tokens. Decrease to allow such tokens. `40` is generally considered a safe value.|
 
+## Code Cutter
+
+I tested all major open weight models, with 4D 21 and AI Kit, to see how well they support tool calling and structured output. I used the same demo that was used in the 21 beta webinar.
+
+In each table, you will see 2 icons 
+
+✅<br/>❌
+
+The one on top refers to structured output, whether the model output successfully validated against the JSON schema. 
+
+The one under it refers to tool calling, whether the model made requests to use tools in the right format and whether t used the results given in response. 
+
+> [!TIP]
+> Tool calling is a form of chat completion. In a standard chat, each party plays the role of a "user" and an "assistant", taking turns in an ongoing conversation. When tool calling is enabled, the AI may send a structured function call, to which the other side is expected to respond in a "tool" role instead of a "user" role.
+ 
 ## Flagship Open Weight Models
 
 > [!WARNING]
@@ -50,9 +67,6 @@ Hyper parameters are levers that control the model's temperament. Finding the pe
 |Kimi K2 Thinking|✅<br/>❌|❌<br/>❌|✅<br/>✅|✅<br/>❌
 |DeepSeek R1 0528|❌<br/>❌|❌<br/>❌||✅<br/>❌
 |Cogito 671B v2|❌<br/>❌|
-
-> [!TIP]
-> Top icon indicates structured output capability. Botton icon indicates tool calling capability.
 
 ### Llama
 
@@ -134,45 +148,43 @@ The smaller models may lack thinking capabilty to plan a sequence of tool calls 
 |Qwen 3 32B ||❌<br/>❌|✅<br/>❌
 |Qwen 3 235B Thinking|||✅<br/>❌
 
----
-
-#### OpenAI Compatibility with AIKit function calling
-
-|Model&nbsp;Family|Version|Function&nbsp;Calling|Remarks
-|-|-|:-:|-|
-|GPT|3.5||This is not a chat model and thus not supported in the v1/chat/completions endpoint. 
-||3.5-turbo||This is not a chat model and thus not supported in the v1/chat/completions endpoint. 
-||o1||This model is only supported in v1/responses and not in v1/chat/completions.
-||o3||This is not a chat model and thus not supported in the v1/chat/completions endpoint. 
-||o4||Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.
-||4||
-||4o|✅|
-||4-turbo|✅|
-||4.1|✅|
-||5||This model is only supported in v1/responses and not in v1/chat/completions.
-||5.1|✅|
-||5.2|✅|
+### OpenAI GPT
 
 For function calling you would want to use a **reasoning** (thinking, chain of thought) model. The first reasoning model from OpenAI is **4o** which was released between 4 and 4.1. 4.1 is the last non-reasoning model. After 4.1 came o1, o3, and o4 which are all reasoning models. GPT 5 series are all reasoninig models. As of today, 3.5, 4o, 4.1, o1, o3, o4 are legacy models.
 
+|Model||Remarks
+|-|:-:|-|
+|3.5|❌<br/>❌|This is not a chat model and thus not supported in the v1/chat/completions endpoint. 
+|3.5-turbo|❌<br/>❌|This is not a chat model and thus not supported in the v1/chat/completions endpoint. 
+|o1|❌<br/>❌|This model is only supported in v1/responses and not in v1/chat/completions.
+|o3|❌<br/>❌|This is not a chat model and thus not supported in the v1/chat/completions endpoint. 
+|o4|❌<br/>❌|Unsupported value: 'temperature' does not support 0 with this model. Only the default (1) value is supported.
+|4|❌<br/>❌|
+|4o|✅<br/>✅|
+|4-turbo|✅<br/>✅|
+|4.1|✅<br/>✅|
+|5|❌<br/>❌|This model is only supported in v1/responses and not in v1/chat/completions.
+|5.1|✅<br/>✅|
+|5.2|✅<br/>✅|
+
 > Use 4o, 4-turbo, 4.1, 5.1, or 5.2.
 
-#### Google Compatibility with AIKit function calling
+### Gemini
 
-|Model&nbsp;Family|Version|Function&nbsp;Calling|Remarks
-|-|-|:-:|-|
-|Gemini|2.0|
-||2.5|✅|
-| |3||
+|Model||
+|-|:-:|
+|2.0|❌<br/>❌
+|2.5|✅<br/>✅|
+|3|❌<br/>❌|
 
 > Use 2.5. Gemini 3 (preview) on OpenAI compatibility seems to have a regression.
 
-#### Claude Compatibility with AIKit function calling
+### Claude 
 
-|Model&nbsp;Family|Version|Function&nbsp;Calling|Remarks
-|-|-|:-:|-|
-|Haiku|4.5|✅|
-|Opus|4.5|✅|
-|Sonnet|4.5|✅|Request might exceed the rate limit of 10,000 input tokens per minute.
+|Model||Remarks
+|-|:-:|:-|
+|Haiku 4.5|✅<br/>✅|
+|Opus 4.5|✅<br/>✅|
+|Sonnet 4.5|✅<br/>✅|Request might exceed the rate limit of 10,000 input tokens per minute.
 
 > Use Haiku or Opus if you have a low quota.
