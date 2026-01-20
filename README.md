@@ -60,9 +60,9 @@ Hyper parameters are levers that control the model's temperament. Finding the pe
 
 |Model|llama.cpp|Azure OpenAI|
 |-|:-:|:-:|
-|Llama 3.1 8B Instruct| 
-|Llama 3.2 1B Instruct|
-|Llama 3.2 3B Instruct|
+|Llama 3.1 8B Instruct| ❌<br/>❌
+|Llama 3.2 1B Instruct|❌<br/>❌
+|Llama 3.2 3B Instruct|❌<br/>❌
 |Llama 3.3 70B Instruct| |❌<br/>❌||
 |Llama 3.1 405B| |❌<br/>❌||
 |Llama 4 Scout 17B Instruct| |❌<br/>❌||
