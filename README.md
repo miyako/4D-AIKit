@@ -24,7 +24,7 @@ Tool calling and structured outputs depend not just on the models themselves but
 
 LLMs have gone though several phases of evolution in the past couple of years. The most notable of which is that there are now several kinds of models.
 
-An **instruct** model is trained, or fine-tuned, to follow instructions than simply engage in a casual conversaion. It uses it LLM training to dtermine what the users wants and responds accrodingly. It will only use tools when specifcally asked to. It is the right kind of AI to use as an interface for simple automation tasks. On the other hand, an instuct model may fail if the prompt is too abstract or lacks strategy.
+An **instruct** model is trained, or fine-tuned, to follow instructions than simply engage in a casual conversaion. It uses its LLM training to dtermine what the users wants and responds accrodingly. It will only use tools when specifcally asked to. It is the right kind of AI to use as an interface for simple automation tasks. On the other hand, an instuct model may fail if the prompt is too abstract or lacks strategy.
 
 A **reasoning** model is specifically trained in logic. Unlike earlier models that are trained to give the most likely response, the model reflects on its generated output and tries to make sense of it. while it may sound more intelligent, it has the potential to disobey instructions that seem, well, unreasonable. For simple automation tasks, the reasoning may actually backfire and result in hallucination or a chain of thought stuck in a rut.
 
