@@ -40,23 +40,33 @@ Hyper parameters are levers that control the model's temperament. Finding the pe
 |`top-k`|Limits how many possible tokens to consider. `1` recommended for structured output.|
 |`repeat-penalty`|Increase to penalise repeating tokens. Decrease to allow such tokens. `40` is generally considered a safe value.|
 
-## Evaluation
+## Flagship Open Weight Models
 
-> [!TIP]
-> Top icon indicates structured output capability. Botton icon indicates tool calling capability.
+> [!WARNING]
+> These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
 
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|DeepInfra
 |-|:-:|:-:|:-:|:-:|
-|Llama 3.3 70B Instruct| |❌<br/>❌||
-|Llama 3.1 405B| |❌<br/>❌||
-|Llama 4 Scout 17B Instruct| |❌<br/>❌||
-|Llama 4 Maverick 17B Instruct| |❌<br/>❌||
 |Kimi K2 Thinking|✅<br/>❌|❌<br/>❌|✅<br/>✅|✅<br/>❌
 |DeepSeek R1 0528|❌<br/>❌|❌<br/>❌||✅<br/>❌
 |Cogito 671B v2|❌<br/>❌|
 
-> [!WARNING]
-> These models are technically open weight but too large to run on any consumer equipment. You need a cloud provider.
+> [!TIP]
+> Top icon indicates structured output capability. Botton icon indicates tool calling capability.
+
+### Llama
+
+**Llama**  is an open weight model developed by Meta. Many versions of the model are hosted on different platforms.
+
+|Model|llama.cpp|Azure OpenAI|
+|-|:-:|:-:|
+|Llama 3.1 8B Instruct| 
+|Llama 3.2 1B Instruct|
+|Llama 3.2 3B Instruct|
+|Llama 3.3 70B Instruct| |❌<br/>❌||
+|Llama 3.1 405B| |❌<br/>❌||
+|Llama 4 Scout 17B Instruct| |❌<br/>❌||
+|Llama 4 Maverick 17B Instruct| |❌<br/>❌||
 
 ### Phi 
 
