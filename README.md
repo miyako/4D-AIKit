@@ -58,7 +58,7 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 
 ### Gemma
 
-**Gemma** is an open weight model developed by Google.There are pre-trained (Pt) and instruction tuned (It) models. Developer instruction is not enabled for the model on Google Cloud Platform.
+**Gemma** is an open weight model developed by Google.There are pre-trained (Pt) and instruction tuned (It) models. Developer instruction is not enabled for the model on Google Cloud Platform. The "N" variants are specifically designed to run better on mobile devices. 
 
 |Model|llama.cpp|Google Cloud Platform |
 |-|:-:|:-:|
@@ -66,6 +66,8 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 |Gemma 3 4B It||❌<br/>❌|
 |Gemma 3 12B It||❌<br/>❌|
 |Gemma 3 27B It||❌<br/>❌|
+|Gemma 3N E4B It||❌<br/>❌|
+|Gemma 3N E2B It||❌<br/>❌|
 
 ### Qwen 
 
