@@ -28,7 +28,7 @@ An **instruct** model is trained, or fine-tuned, to follow instructions than sim
 
 A **reasoning** model is specifically trained in logic. Unlike earlier models that are trained to give the most likely response, the model reflects on its generated output and tries to make sense of it. while it may sound more intelligent, it has the potential to disobey instructions that seem, well, unreasonable. For simple automation tasks, the reasoning may actually backfire and result in hallucination or a chain of thought stuck in a rut.
 
-A **thinking** model is trained to think which course of action to take in order to satisfy the user's demand. The thinking process consumes massive amount of tokens and increases the time the model takes to make the first move. It also introduces a layer of unpredictability as to what the model will actually do to reach its goal. You do not need a thinking model if the prompt is already well thought out. 
+A **thinking** model is trained to think which course of action to take in order to satisfy the user's demand. The thinking process consumes a massive amount of tokens and increases the time the model takes to make the first move. It also introduces a layer of unpredictability as to what the model will actually do to reach its goal. You do not need a thinking model if the prompt is already well thought out. 
 
 ## Hyper Parameters
 
