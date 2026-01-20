@@ -34,11 +34,11 @@ Hyper parameters are levers that control the model's temperament. Finding the pe
 
 |Parameter|Description|
 |-|-|
-|temperature|Increase to encourage wild thinkning. Decrease to avoid syntax drift. `0` recommended for tool calling.|
-|top-p|Increase to include the less likely "long tail" tokens. Decrease to cut such tokens off. `0.9` recommended for structured output.|
-|min-p|Increase to include exotic tokens. Decrease to cut such tokens off. Preferred over top-k. `0.05` recommended for structured output.|
-|top-k|Limits how many possible tokens to consider. `1` recommended for structured output.|
-|repeat-penalty|Increase to penalise repeating tokens. Decrease to allow such tokens. `40` is generally considered a safe value.|
+|`temperature`|Increase to encourage wild thinkning. Decrease to avoid syntax drift. `0` recommended for tool calling.|
+|`top-p`|Increase to include the less likely "long tail" tokens. Decrease to cut such tokens off. `0.9` recommended for structured output.|
+|`min-p`|Increase to include exotic tokens. Decrease to cut such tokens off. Preferred over top-k. `0.05` recommended for structured output.|
+|`top-k`|Limits how many possible tokens to consider. `1` recommended for structured output.|
+|`repeat-penalty`|Increase to penalise repeating tokens. Decrease to allow such tokens. `40` is generally considered a safe value.|
 
 ## Evaluation
 
