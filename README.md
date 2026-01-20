@@ -62,8 +62,9 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 
 |Model|llama.cpp|Google Cloud Platform |
 |-|:-:|:-:|
-|Gemma 3 1B It||❌<br/>❌|
-|Gemma 3 4B It||❌<br/>❌|
+|Gemma 3 270M It|❌<br/>❌||
+|Gemma 3 1B It|✅<br/>❌|❌<br/>❌|
+|Gemma 3 4B It|✅<br/>❌|❌<br/>❌|
 |Gemma 3 12B It||❌<br/>❌|
 |Gemma 3 27B It||❌<br/>❌|
 |Gemma 3N E4B It||❌<br/>❌|
