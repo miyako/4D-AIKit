@@ -57,12 +57,13 @@ Phi 4 supports structured output on llama.cpp but not on Microsoft Foundry. The 
 |Phi 4 Reasoning Plus|✅<br/>❌
 |Phi 4 Reasoning|✅<br/>❌|❌<br/>❌||
 |Phi 4 |✅<br/>❌|❌<br/>❌
+|Phi 4 Multimodal Instruct||❌<br/>❌
 
 ### Gemma
 
 **Gemma** is an open weight model developed by Google. There are pre-trained (Pt) and instruction tuned (It) models. The "N" variants are specifically designed to run better on mobile devices. 
 
-**Function calls are not enabled for the model on Google Cloud Platform**. 
+Function calls are not enabled on Google Cloud Platform. 
 
 > Function calling is not enabled for {model}
 
