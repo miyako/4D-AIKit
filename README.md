@@ -56,6 +56,17 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 |Phi 4 Reasoning|✅<br/>❌|❌<br/>❌||
 |Phi 4 |✅<br/>❌||❌<br/>❌
 
+### Gemma
+
+**Gemma** is an open weight model developed by Google.There are pre-trained (Pt) and instruction tuned (It) models. Developer instruction is not enabled for the model on Google Cloud Platform.
+
+|Model|llama.cpp|Google Cloud Platform |
+|-|:-:|:-:|:-:|
+|Gemma 3 1B It||❌<br/>❌|
+|Gemma 3 4B It||❌<br/>❌|
+|Gemma 3 12B It||❌<br/>❌|
+|Gemma 3 27B It||❌<br/>❌|
+
 ### Qwen 
 
 **Qwen** is an open weight model developed by Alibaba. Their flagship `Qwen3-235B-A22B` is hosted by Alibaba Cloud and multiple providers including [Fireworks AI](https://fireworks.ai) and [DeepInfra](https://deepinfra.com).  Qwen 2.5 and 3 both have native function call support.
