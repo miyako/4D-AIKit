@@ -112,7 +112,7 @@ Gemma 3 supports structured output on llama.cpp but not on Microsoft Foundry for
 
 |Model|llama.cpp|Azure OpenAI|DeepInfra |
 |-|:-:|:-:|:-:|
-|Qwen 3 0.6B|❌<br/>❌||
+|Qwen 3 0.6B|✅<br/>❌||
 |Qwen 3 1.7B|✅<br/>❌||
 |Qwen 3 4B Thinking 2507|✅<br/>✅||
 |Qwen 3 4B Instruct 2507|✅<br/>✅||
