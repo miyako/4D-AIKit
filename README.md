@@ -19,8 +19,8 @@ Add `https://github.com/miyako/AIKit/` (without the official `4D-` prefix) to `d
 
 |Model|FireWorks AI|Azure OpenAI|Moonshot AI|DeepInfra
 |-|:-:|:-:|:-:|:-:|
-|Llama 3.1 405B| |❌<br/>❌||
 |Llama 3.3 70B Instruct| |❌<br/>❌||
+|Llama 3.1 405B| |❌<br/>❌||
 |Llama 4 Scout 17B Instruct| |❌<br/>❌||
 |Llama 4 Maverick 17B Instruct| |❌<br/>❌||
 |Kimi K2 Thinking|✅<br/>❌|❌<br/>❌|✅<br/>✅|✅<br/>❌
