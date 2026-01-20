@@ -42,7 +42,7 @@ In this test, the prompt left the model to its own devices whether to use the to
 
 **Phi** is an open weight model developed by Microsoft. Several variants of the model are hosted on [Microsoft Foundry](https://azure.microsoft.com/en-us). 
 
-[**Phi 4 Mini Instruct**](https://huggingface.co/microsoft/Phi-4-mini-instruct) and [Phi 4 Multimodal Instruct](https://huggingface.co/microsoft/Phi-4-multimodal-instruct) supports function calls but not [Phi 4 Mini Reasoning](https://huggingface.co/microsoft/Phi-4-mini-reasoning) or the original [Phi 4](https://huggingface.co/microsoft/phi-4).
+[**Phi 4 Mini Instruct**](https://huggingface.co/microsoft/Phi-4-mini-instruct) and [Phi 4 Multimodal Instruct](https://huggingface.co/microsoft/Phi-4-multimodal-instruct) supports function calls but not [Phi 4 Mini Reasoning](https://huggingface.co/microsoft/Phi-4-mini-reasoning) or the original [Phi 4](https://huggingface.co/microsoft/phi-4). Because the reasoning models do not support function calls, you need to give clear instructions on how to use the tools; you can't depend on the model to strategically use the tools. 
 
 Phi 4 supports structured output on llama.cpp but not on Microsoft Foundry. The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard. 
 
@@ -51,7 +51,7 @@ Phi 4 supports structured output on llama.cpp but not on Microsoft Foundry. The 
 |Phi 4 Mini Flash Reasoning|&nbsp;<br>&nbsp;||
 |Phi 4 Mini Reasoning Plus|✅<br/>❌|
 |Phi 4 Mini Reasoning|✅<br/>❌|❌<br/>❌|
-|Phi 4 Mini Instruct|✅<br/>❌|❌<br/>❌
+|Phi 4 Mini Instruct|✅<br/>⚠️|❌<br/>❌
 |Phi 4 Reasoning Plus|✅<br/>❌
 |Phi 4 Reasoning|✅<br/>❌|❌<br/>❌||
 |Phi 4 |✅<br/>❌|❌<br/>❌
