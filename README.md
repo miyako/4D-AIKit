@@ -110,7 +110,7 @@ Gemma 3 supports structured output on llama.cpp but not on Microsoft Foundry for
 
 **Qwen** is an open weight model developed by Alibaba. Their flagship `Qwen3-235B-A22B` is hosted by Alibaba Cloud and multiple providers including [Fireworks AI](https://fireworks.ai) and [DeepInfra](https://deepinfra.com).  Qwen 2.5 and 3 both have native function call support.
 
-Qwen 3 is the only model in my testing that supports both structured outputs and tool calling on llama.cpp.
+The smaller models may lack thinking capabilty to plan a sequence of tool calls if the prompt is too vague. That said, Qwen 3 is the only model in my testing that supports both structured outputs and tool calling on llama.cpp. 🏆
 
 |Model|llama.cpp|Azure OpenAI|DeepInfra |
 |-|:-:|:-:|:-:|
