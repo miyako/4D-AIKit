@@ -36,13 +36,13 @@ Function calls and structured outputs are features not just of the models (altho
 
 Function calls and structured outputs do not necessarily require models to think or reason. For simple agentic automation tasks, an "instruct" model that understands natural language and follows instructions would be both safer and more efficient. A "thinking" model first strategies its course of action, which consumes massive amount of tokens and increases the time it takes to generate the first token. It also introduces an unnecessary layer of unpredictability to what should be a straightforward task. Likewise, "reasoning" models might disobey instructions that seem, well, unreasonable. 
 
-In this test, the prompt left the model to its own devices whether to use the tools or not. The combinaation of a demanding prompt and and exact schema might have pushed the model to an imapass or hallicanation rut. Some of the failures are not necessarily damning verdicts but rather an indication that maybe a simpler model or a verbose prompt was needed.
+In this test, the prompt left the model to its own devices whether to use the tools or not. The combination of a demanding prompt and and exact schema might have pushed the model to an imapass or hallicanation rut. Some of the failures are not necessarily damning verdicts but rather an indication that maybe a simpler model or a verbose prompt was needed.
 
 ### Phi 
 
 **Phi** is an open weight model developed by Microsoft. Several variants of the model are hosted on [Microsoft Foundry](https://azure.microsoft.com/en-us). 
 
-[**Phi 4 Mini Instruct**](https://huggingface.co/microsoft/Phi-4-mini-instruct) and [Phi 4 Multimodal Instruct](https://huggingface.co/microsoft/Phi-4-multimodal-instruct) supports function calls but not [Phi 4 Mini Reasoning](https://huggingface.co/microsoft/Phi-4-mini-reasoning) or the original [Phi 4](https://huggingface.co/microsoft/phi-4). Because the reasoning models do not support function calls, you need to give clear instructions on how to use the tools; you can't depend on the model to strategically use the tools. 
+[**Phi 4 Mini Instruct**](https://huggingface.co/microsoft/Phi-4-mini-instruct) and [Phi 4 Multimodal Instruct](https://huggingface.co/microsoft/Phi-4-multimodal-instruct) supports function calls but not [Phi 4 Mini Reasoning](https://huggingface.co/microsoft/Phi-4-mini-reasoning) or the original [Phi 4](https://huggingface.co/microsoft/phi-4). Because the reasoning models do not support function calls, you need to give clear instructions on how to use the tools and what to do with the results; you can't expect the model to plan a sequence of function calls. 
 
 Phi 4 supports structured output on llama.cpp but not on Microsoft Foundry. The backend server framework used by Microsoft Azure OpenAI evidently implements the older "JSON Mode" standard not the newer "Structured Outputs" standard. 
 
