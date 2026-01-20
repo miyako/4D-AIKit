@@ -75,6 +75,7 @@ Google released [FunctionGemma](https://blog.google/innovation-and-ai/technology
 |Gemma 3 27B It||❌<br/>❌|
 |Gemma 3N E4B It||❌<br/>❌|
 |Gemma 3N E2B It||❌<br/>❌|
+|FunctionGemma|❌<br/>❌|
 
 ### Qwen 
 
