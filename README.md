@@ -60,7 +60,7 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 
 **Gemma** is an open weight model developed by Google. There are pre-trained (Pt) and instruction tuned (It) models. Developer instruction is not enabled for the model on Google Cloud Platform. The "N" variants are specifically designed to run better on mobile devices. 
 
-Gemma 3 [function call ](https://ai.google.dev/gemma/docs/capabilities/function-calling#function-calling-setup) support is incomplete. It knows how to call a function but it can't process the function result. 
+Gemma 3 [function call ](https://ai.google.dev/gemma/docs/capabilities/function-calling#function-calling-setup) support is incomplete. It knows how to call a function but it can't process the function result. There are models fine tuned by the community for better tool support. Google released [FunctionGemma](https://blog.google/innovation-and-ai/technology/developers-tools/functiongemma/) to address this issue.
 
 |Model|llama.cpp|Google Cloud Platform |
 |-|:-:|:-:|
