@@ -28,6 +28,18 @@ A **reasoning** model is specifically trained in logic. Unlike earlier models th
 
 A **thinking** model is trained to think which course of action to take in order to satisfy the user's demand. The thinking process consumes massive amount of tokens and increases the time the model takes to make the first move. It also introduces a layer of unpredictability as to what the model will actually do to reach its goal. You do not need a thinking model if the prompt is already well thought out. 
 
+## Hyper Parameters
+
+Hyper parameters are levers that control the model's temperament. Finding the perfect combination is critical for tasks that need to balance of creative thinking and rule based output, especially with models with limited 
+
+|Parameter|Description|
+|-|-|
+|temperature|Increase to encourage wild thinkning. Decrease to avoid syntax drift. `0` recommended for tool calling.|
+|top-p|Increase to include the less likely "long tail" tokens. Decrease to cut such tokens off. `0.9` recommended for structured output.|
+|min-p|Increase to include exotic tokens. Decrease to cut such tokens off. Preferred over top-k. `0.05` recommended for structured output.|
+|top-k|Limits how many possible tokens to consider. `1` recommended for structured output.|
+|repeat-penalty|Increase to penalise repeating tokens. Decrease to allow such tokens. `40` is generally considered a safe value.|
+
 ## Evaluation
 
 > [!TIP]
