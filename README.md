@@ -58,7 +58,11 @@ The backend server framework used by Microsoft Azure OpenAI evidently implements
 
 ### Gemma
 
-**Gemma** is an open weight model developed by Google. There are pre-trained (Pt) and instruction tuned (It) models. Developer instruction is not enabled for the model on Google Cloud Platform. The "N" variants are specifically designed to run better on mobile devices. 
+**Gemma** is an open weight model developed by Google. There are pre-trained (Pt) and instruction tuned (It) models. The "N" variants are specifically designed to run better on mobile devices. 
+
+**Function calls are not enabled for the model on Google Cloud Platform**. 
+
+> Function calling is not enabled for {model}
 
 Gemma 3 does not have native [function call](https://ai.google.dev/gemma/docs/capabilities/function-calling#function-calling-setup) support. Gemma 3 expects a standard two-role conversation between a user and an assistant, with no "tool" role in between. You can't have an effective agent without prompt engineering where the user translates the function result to a natural statement. There are community models fine tuned for better tool support. 
 
